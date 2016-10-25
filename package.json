@@ -1,0 +1,27 @@
+{
+  "name": "bizmailer",
+  "version": "0.0.1",
+  "description": "BIZMAILER Node.js Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GwonHyeok/node-bizmailer.git"
+  },
+  "keywords": [
+    "bizmailer"
+  ],
+  "author": "GwonHyeok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GwonHyeok/node-bizmailer/issues"
+  },
+  "homepage": "https://github.com/GwonHyeok/node-bizmailer#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1"
+  }
+}
