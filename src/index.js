@@ -49,9 +49,9 @@ class BizMailer {
         // 문자 메세지를 Split 하여 m_memo 에 집어 넣는다
         // 1 ~ 5 번 까지는 데이터 베이스에 기록이 가능 하며
         // 6번은 자릿수 제한이 없고 데이터베이스에 기록이 되지 않는다.
-        const messages = this.splitText(options['message'] || '');
+        const messages = this._splitText(options['message'] || '');
         for (let i = 1; i <= 6; i++) {
-            memoParams[`memo_${i }`] = i != 6 ? messages[i] : messages.slice(6, messages.length).join('');
+            memoParams[`memo_${i}`] = i != 6 ? messages[i-1] : messages.slice(6, messages.length).join('');
         }
 
         // 비즈 메일러 서버에 요청할 파라미터 정보
@@ -83,7 +83,7 @@ class BizMailer {
         })
     }
 
-    splitText(message) {
+    _splitText(message) {
         const splitText = [], splitCharacter = [...message];
         let startPos = 0;
 
