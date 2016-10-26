@@ -4,6 +4,10 @@
 const BizMailer = require('../index');
 
 const bizMailer = new BizMailer(process.env.TEST_BIZ_ID);
-bizMailer.sendSMS(process.env.TEST_AUTH_KEY, {m_mobile: '01000000000', m_memo1: 'MEMO_1 영역 입니다'})
+bizMailer
+    .sendSMS(process.env.TEST_AUTH_KEY, {
+        mobile: '01000000000',
+        message: '안녕하세요 문자 테스트 중 입니다!'
+    })
     .then(result => console.log(result))
     .catch(err => console.error(err));
