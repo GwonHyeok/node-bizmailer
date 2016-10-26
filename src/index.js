@@ -51,7 +51,7 @@ class BizMailer {
         // 6번은 자릿수 제한이 없고 데이터베이스에 기록이 되지 않는다.
         const messages = this._splitText(options['message'] || '');
         for (let i = 1; i <= 6; i++) {
-            memoParams[`memo_${i}`] = i != 6 ? messages[i-1] : messages.slice(6, messages.length).join('');
+            memoParams[`m_memo${i}`] = i != 6 ? messages[i-1] : messages.slice(6, messages.length).join('');
         }
 
         // 비즈 메일러 서버에 요청할 파라미터 정보
