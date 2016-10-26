@@ -1,6 +1,6 @@
 {
   "name": "bizmailer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "BIZMAILER Node.js Library",
   "main": "index.js",
   "scripts": {
